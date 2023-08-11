@@ -1,3 +1,4 @@
+import logo from './logo.svg';
 import './App.css';
 import React, {useState, useEffect} from 'react';
 
@@ -9,7 +10,7 @@ function App () {
 
     useEffect(() => {
         fetch('https://api.quotable.io/random')
-        .then((response) => response.json())
+        .then((res) => res.json())
         .then((data) => {
 
             setQuote(data.content)
@@ -20,9 +21,8 @@ function App () {
 
 return (
 <>
-<h1>Random Quote Generator</h1>
-<p>quote: {quote}</p>
-<h2>author: {author}</h2>
+<h1>{quote}</h1>
+<h2>{author}</h2>
 
 </>
 )
